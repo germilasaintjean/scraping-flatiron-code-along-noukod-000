@@ -1,8 +1,17 @@
+class Course
 
-class course
- attr_reader :title
+  attr_accessor :title, :schedule, :description
 
-  def  title
-course.title  = ""
+  @@all = []
+  def initialize
+    @@all << self
   end
+
+ def self.all
+   @@all
+ end
+
+ def self.reset_all
+   @@all.clear
+ end
 end
